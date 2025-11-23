@@ -1,6 +1,6 @@
 
         
-/* -----------------------------Global styling------------------------------ */
+/* -----------------------------global styling------------------------------ */
 
         /* this is for having the same font in all the html pages */
 
@@ -27,15 +27,13 @@ h1{
     border: 2px solid #646D7E;
     background-color: black;
 }
-h1:hover{
-    animation: ProjectTeaserHover .25s ease-in forwards;
-}
-/*-----------------------This is for responsive design-----------------------*/
+
+/*-----------------------responsive design-----------------------*/
 
 
 
 
-/* For mobile phones: */
+/* for mobile phones: */
 
 @media(max-width:599px) {
     .desktop-only {
@@ -51,7 +49,7 @@ h1:hover{
 
 
 
-/* For tablets */
+/* for tablets */
 
 @media (min-width: 600px) {
     .mobile-only {
@@ -76,7 +74,7 @@ h1:hover{
     }
 }
 
-/* For larger Screen */
+/* for larger Screen */
 
 @media (min-width:1800px){
     .screenshot{
@@ -88,7 +86,7 @@ h1:hover{
 
 
 
-/*------------------------Animation Section-----------------------*/
+/*------------------------animation section-----------------------*/
 
 @keyframes ProjectTeaserHover {
     from{opacity: 0; color: grey;}
@@ -100,15 +98,19 @@ h1:hover{
     to{opacity:1; background-color: #52595D;color:#99A3A3;}
 }
 
-/* -----------------------------End of global styling-------------------------- */
+.hover-animation:hover{
+    animation: ProjectTeaserHover .25s ease-in forwards;
+}
+
+/* ---------------------------- styling for each page -----------*/
 
 
-/* ---------------------------Styling for the homePage index.html------------------------- */
+
+/* ---------------------------styling for the homepage------------------------- */
 
 
-
-  /* This is to keep the card in center */
-#aboutme .container-fluid {
+  /* this is to keep the card in center */
+.aboutme .container-fluid {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,26 +123,18 @@ h1:hover{
 }
 
 
-#sec-intro{
+.sec-intro{
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     grid-gap: 20px;
 }
 
-    /* to give the hover animation */
-.intro:hover {
-    animation: ProjectTeaserHover .25s ease-in forwards;
-}
 
  /* this is to make the text at the center */
-#projectTeaser h2{
+.project-teaser h2{
     text-align: center;
     border: 2px solid grey ;
-}
-
-#projectTeaser h2:hover{
-    animation: ProjectTeaserHover .25s ease-in forwards;
 }
 
 .pro-teaser-row{
@@ -163,7 +157,7 @@ h1:hover{
     margin:20px;
 }
 .project li{
-    padding: 15px;;
+    padding: 15px;
 }
 
 
@@ -174,14 +168,11 @@ h1:hover{
 
 /*--------------styling for professional experience page-------------*/
 
-.exp_category{
+.exp-category{
     margin: 20px;
     padding: 15px;
     border: 2px solid grey;
     background-color: #736F6E;
 }
 
-.exp_category:hover{
-    animation: ProjectTeaserHover .25s ease-in forwards;
-}
 
