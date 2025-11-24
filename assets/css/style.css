@@ -7,9 +7,9 @@
 body{
 
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
 
 }
-
     /* this is for the top bar indicating the page is opened in desktop or mobile device */
     
 .site-mode {
@@ -43,7 +43,9 @@ h1{
         display:grid;
         grid-template-columns: repeat(1, 1fr);
     }
-
+    .body-color{
+        background-color: #0C090A;
+    }
 
 }
 
@@ -56,12 +58,9 @@ h1{
         display: none;
 
     }
-
-    body.text-bg-dark {
-        background-color: #454545 !important;
+    .body-color{
+        background-color: #3A3B3C;
     }
-
-
 }
 
 /* this for the medium sized loptop */
@@ -72,6 +71,10 @@ h1{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
     }
+    .body-color{
+        background-color: #3D3C3A;
+    }
+
 }
 
 /* for larger Screen */
@@ -80,6 +83,9 @@ h1{
     .screenshot{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .body-color{
+        background-color: #504A4B;
     }
     
 }
@@ -98,7 +104,8 @@ h1{
     to{opacity:1; background-color: #52595D;color:#99A3A3;}
 }
 
-.hover-animation:hover{
+/*hover animation to .hoveranimation class and the element inside that class*/
+.hover-animation:hover,.hover-animation  :hover{
     animation: ProjectTeaserHover .25s ease-in forwards;
 }
 
@@ -151,15 +158,23 @@ h1{
 
 /* this is for when the page is opened in desktop */
 
-.project{
+.project,.scr-heading{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    margin:20px;
+    margin:10px;
+    border: 2px solid grey;
+    padding: 10px;
 }
+
+.screenshot{
+    margin:10px;
+    border: 2px solid grey;
+    padding: 10px;
+}
+
 .project li{
     padding: 15px;
 }
-
 
 .img{
     width:300px;
