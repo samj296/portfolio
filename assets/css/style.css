@@ -43,10 +43,11 @@ body{
   color: grey;
 }
 
-h1{
+#index-header,#project-header,#exp-header{
     text-align: center;
     border: 2px solid #646D7E;
     background-color: black;
+    color: white;
 }
 
 /*-----------------------responsive design-----------------------*/
