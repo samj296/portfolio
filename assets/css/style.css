@@ -16,6 +16,16 @@ body{
     float:right;
 }
 
+.switch-theme-dark{
+    background-color: #555D50;
+    color: white;
+}
+
+.switch-theme-light{
+    background-color: #98AFC7;
+    color: black;
+}
+
 .navbar{
     clear: both;
 }
@@ -54,7 +64,9 @@ h1{
         display:grid;
         grid-template-columns: repeat(1, 1fr);
     }
-    /* initialy the body color is designed in the dark mode so the .body-color is for dark */
+
+
+    
     .body-color{
         background-color: #0C090A;
         color:white
@@ -75,7 +87,8 @@ h1{
         display: none;
 
     }
-     /* initialy the body color is designed in the dark mode so the .body-color is for dark */
+    /* theme mode
+     initialy the body color is designed in the dark mode so the .body-color is for dark */
     .body-color{
         background-color: #3A3B3C;
     }
@@ -93,7 +106,8 @@ h1{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
     }
-     /* initialy the body color is designed in the dark mode so the .body-color is for dark */
+     /* theme mode
+     initialy the body color is designed in the dark mode so the .body-color is for dark */
     .body-color{
         background-color: #3D3C3A;
     }
@@ -111,7 +125,8 @@ h1{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
     }
-     /* initialy the body color is designed in the dark mode so the .body-color is for dark */
+     /* theme mode
+     initialy the body color is designed in the dark mode so the .body-color is for dark */
     .body-color{
         background-color: #504A4B;
     }
