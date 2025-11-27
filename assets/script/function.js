@@ -19,7 +19,7 @@ toggleButton.addEventListener("click", function (){
                 
                 /* here i will loop through all the category in experience page */
                 for(let i = 0; i <expCatogoriesLight.length; i++){
-                    expCatogoriesLight[i].className.replace = "exp-category-light"
+                    expCatogoriesLight[i].classList.replace ("exp-category","exp-category-light")
                 }
             }
             toggleButton.setAttribute("class", "switch-theme-light") 
@@ -39,7 +39,7 @@ toggleButton.addEventListener("click", function (){
                 
                 /* here i will loop through all the category in experience page */
                 for(let i = 0; i <expCategoriesDark.length; i++){
-                    expCategoriesDark[i].className.replace = "exp-category"
+                    expCategoriesDark[i].classList.replace ("exp-category-light", "exp-category") 
                 }
             }
             toggleButton.setAttribute("class", "switch-theme-dark") 
