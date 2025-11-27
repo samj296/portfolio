@@ -1,5 +1,7 @@
-let toggleButton = document.querySelector(".switch-theme");
-
+let toggleButton = document.querySelector(".switch-theme-dark");
+if(!toggleButton){
+    toggleButton = document.querySelector(".switch-theme-light");
+}
 
 
 toggleButton.addEventListener("click", function (){
@@ -13,13 +15,14 @@ toggleButton.addEventListener("click", function (){
 
             let expCatogoriesLight = document.querySelectorAll(".exp-category")
             /* this only applicabel in experience.html */
-            if (expCatogoriesLight){
+            if (expCatogoriesLight.length>0){
                 
                 /* here i will loop through all the category in experience page */
                 for(let i = 0; i <expCatogoriesLight.length; i++){
-                    expCatogoriesLight[i].className = "exp-category-light hover-animation"
+                    expCatogoriesLight[i].className.replace = "exp-category-light"
                 }
             }
+            toggleButton.setAttribute("class", "switch-theme-light") 
             break;
             
         case "Light Mode": /* change to Dark Mode */
@@ -30,15 +33,16 @@ toggleButton.addEventListener("click", function (){
                 
             }
 
-            let expCatogoriesDark = document.querySelectorAll(".exp-category-light")
+            let expCategoriesDark = document.querySelectorAll(".exp-category-light")
             /* this only applicabel in experience.html */
-            if (expCatogoriesDark){
+            if (expCategoriesDark.length>0){
                 
                 /* here i will loop through all the category in experience page */
-                for(let i = 0; i <expCatogoriesDark.length; i++){
-                    expCatogoriesDark[i].className = "exp-category hover-animation"
+                for(let i = 0; i <expCategoriesDark.length; i++){
+                    expCategoriesDark[i].className.replace = "exp-category"
                 }
             }
+            toggleButton.setAttribute("class", "switch-theme-dark") 
             break;
     }
 });
