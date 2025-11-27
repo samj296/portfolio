@@ -1,4 +1,5 @@
 
+
         
 /* -----------------------------global styling------------------------------ */
 
@@ -10,6 +11,16 @@ body{
     color: white;
 
 }
+
+.btn-section{
+    float:right;
+}
+
+.navbar{
+    clear: both;
+}
+
+
     /* this is for the top bar indicating the page is opened in desktop or mobile device */
     
 .site-mode {
@@ -43,10 +54,16 @@ h1{
         display:grid;
         grid-template-columns: repeat(1, 1fr);
     }
+    /* initialy the body color is designed in the dark mode so the .body-color is for dark */
     .body-color{
         background-color: #0C090A;
+        color:white
     }
-
+    .body-white-theme{
+        background-color:#14A3C7 ;
+        color:black
+    }
+    
 }
 
 
@@ -58,8 +75,13 @@ h1{
         display: none;
 
     }
+     /* initialy the body color is designed in the dark mode so the .body-color is for dark */
     .body-color{
         background-color: #3A3B3C;
+    }
+    .body-white-theme{
+        background-color:#659EC7 ;
+        color:black
     }
 }
 
@@ -71,8 +93,13 @@ h1{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
     }
+     /* initialy the body color is designed in the dark mode so the .body-color is for dark */
     .body-color{
         background-color: #3D3C3A;
+    }
+    .body-white-theme{
+        background-color:#87AFC7 ;
+        color:black
     }
 
 }
@@ -84,8 +111,13 @@ h1{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
     }
+     /* initialy the body color is designed in the dark mode so the .body-color is for dark */
     .body-color{
         background-color: #504A4B;
+    }
+    .body-white-theme{
+        background-color:#95B9C7 ;
+        color:black
     }
     
 }
@@ -113,7 +145,7 @@ h1{
 
 
 
-/* ---------------------------styling for the homepage------------------------- */
+/* ---------------------------styling for the homepage(index.html)------------------------- */
 
 
   /* this is to keep the card in center */
@@ -145,7 +177,6 @@ h1{
 }
 
 .pro-teaser-row{
-    background-color: #727c6b;
     padding:20px;
     display: flex;
     gap: 20px;
@@ -183,6 +214,7 @@ h1{
 
 /*--------------styling for professional experience page-------------*/
 
+/* this for the dark mode */
 .exp-category{
     margin: 20px;
     padding: 15px;
@@ -190,4 +222,11 @@ h1{
     background-color: #736F6E;
 }
 
+/* this is for the light mode */
 
+.exp-category-light{
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid grey;
+    background-color: #BCC6CC;
+}
