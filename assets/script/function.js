@@ -12,13 +12,22 @@ document.addEventListener('DOMContentLoaded',() =>{
         
         //applying the dark theme here    
         function darkTheme(){    
+            let navBar = document.querySelector(".navbar");
+            navBar.setAttribute("data-bs-theme","dark");
+
+            let header = document.querySelector(".header-light");
+            if (header){
+                header.classList.replace("header-light", "header-dark");
+            }
+            
+
             let bodyTheme = document.querySelector(".body-color") || document.querySelector(".body-white-theme");  
             if (bodyTheme.classList.contains("body-white-theme")){
                 bodyTheme.classList.replace("body-white-theme", "body-color");
             }
 
             //this only applicable in experience.html
-            let categoriesExp = document.querySelectorAll(".exp-category-light");
+            let categoriesExp = document.querySelectorAll(".exp-category-light","exp-category");
             if (categoriesExp.length>0){
                 for (let i = 0; i<categoriesExp.length; i++){
                     if(categoriesExp[i].classList.contains("exp-category-light")){
@@ -31,14 +40,23 @@ document.addEventListener('DOMContentLoaded',() =>{
             savedTheme = "dark"
         }
 
-        function lightTheme(){     
+        function lightTheme(){   
+            let navBar = document.querySelector(".navbar");
+            navBar.setAttribute("data-bs-theme","light");
+
+            let header = document.querySelector(".header-dark");
+            if (header){
+                header.classList.replace("header-dark", "header-light");
+            }
+            
+            
             let bodyTheme = document.querySelector(".body-color"); 
             if (bodyTheme.classList.contains("body-color")){
                 bodyTheme.classList.replace("body-color", "body-white-theme");
             }
 
             //this only applicable in experience.html
-            let categoriesExp = document.querySelectorAll(".exp-category") || document.querySelectorAll(".exp-category-light");
+            let categoriesExp = document.querySelectorAll(".exp-category", ".exp-category-light");
             if (categoriesExp.length>0){
                 for (let i = 0; i<categoriesExp.length; i++){
                     if(categoriesExp[i].classList.contains("exp-category")){
@@ -60,7 +78,7 @@ document.addEventListener('DOMContentLoaded',() =>{
         lightTheme();
     }
 
-    btnSection.addEventListener("click",() =>{
+    themeBtn.addEventListener("click",() =>{
         if(savedTheme === "dark"){
             lightTheme();
             localStorage.setItem("theme", "light")
