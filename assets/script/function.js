@@ -1,48 +1,73 @@
-let toggleButton = document.querySelector(".switch-theme-dark");
-if(!toggleButton){
-    toggleButton = document.querySelector(".switch-theme-light");
-}
+let savedTheme = localStorage.getItem("theme")
 
+document.addEventListener('DOMContentLoaded',() =>{
+    let themeBtn = document.createElement('button');
+    let btnSection = document.querySelector('.btn-section');
+    
+    btnSection.appendChild(themeBtn);
 
-toggleButton.addEventListener("click", function (){
-    switch(toggleButton.textContent){
-        case "Dark Mode": /* change to light mode */
-            let darkBody = document.querySelector(".body-color");
-            if(darkBody){
-                darkBody.setAttribute("class", "body-white-theme");
-                toggleButton.textContent = "Light Mode";    
+        
+    // this variable is for experience.html
+    
+        
+        //applying the dark theme here    
+        function darkTheme(){    
+            let bodyTheme = document.querySelector(".body-color") || document.querySelector(".body-white-theme");  
+            if (bodyTheme.classList.contains("body-white-theme")){
+                bodyTheme.classList.replace("body-white-theme", "body-color");
             }
 
-            let expCatogoriesLight = document.querySelectorAll(".exp-category")
-            /* this only applicabel in experience.html */
-            if (expCatogoriesLight.length>0){
-                
-                /* here i will loop through all the category in experience page */
-                for(let i = 0; i <expCatogoriesLight.length; i++){
-                    expCatogoriesLight[i].classList.replace ("exp-category","exp-category-light")
+            //this only applicable in experience.html
+            let categoriesExp = document.querySelectorAll(".exp-category-light");
+            if (categoriesExp.length>0){
+                for (let i = 0; i<categoriesExp.length; i++){
+                    if(categoriesExp[i].classList.contains("exp-category-light")){
+                        categoriesExp[i].classList.replace("exp-category-light" , "exp-category");
+                    }
                 }
             }
-            toggleButton.setAttribute("class", "switch-theme-light") 
-            break;
-            
-        case "Light Mode": /* change to Dark Mode */
-            let lightBody = document.querySelector(".body-white-theme");
-            if(lightBody){
-                lightBody.setAttribute("class", "body-color");
-                toggleButton.textContent = "Dark Mode";
-                
+            themeBtn.setAttribute("class","switch-theme-dark")
+            themeBtn.textContent = "light mode"
+            savedTheme = "dark"
+        }
+
+        function lightTheme(){     
+            let bodyTheme = document.querySelector(".body-color"); 
+            if (bodyTheme.classList.contains("body-color")){
+                bodyTheme.classList.replace("body-color", "body-white-theme");
             }
 
-            let expCategoriesDark = document.querySelectorAll(".exp-category-light")
-            /* this only applicabel in experience.html */
-            if (expCategoriesDark.length>0){
-                
-                /* here i will loop through all the category in experience page */
-                for(let i = 0; i <expCategoriesDark.length; i++){
-                    expCategoriesDark[i].classList.replace ("exp-category-light", "exp-category") 
+            //this only applicable in experience.html
+            let categoriesExp = document.querySelectorAll(".exp-category") || document.querySelectorAll(".exp-category-light");
+            if (categoriesExp.length>0){
+                for (let i = 0; i<categoriesExp.length; i++){
+                    if(categoriesExp[i].classList.contains("exp-category")){
+                        categoriesExp[i].classList.replace("exp-category" , "exp-category-light");
+                    }
                 }
             }
-            toggleButton.setAttribute("class", "switch-theme-dark") 
-            break;
+            themeBtn.setAttribute("class","switch-theme-light")
+            themeBtn.textContent = "dark mode"
+            savedTheme = "light"
+        }
+        
+
+    if(savedTheme == null || savedTheme == "dark"){
+        savedTheme = "dark";
+        darkTheme();
+    }else {
+        savedTheme = "light"
+        lightTheme();
     }
-});
+
+    btnSection.addEventListener("click",() =>{
+        if(savedTheme === "dark"){
+            lightTheme();
+            localStorage.setItem("theme", "light")
+        }else if(savedTheme === "light"){
+            darkTheme();
+            localStorage.setItem("theme", "dark")
+        }
+    })
+    
+})
