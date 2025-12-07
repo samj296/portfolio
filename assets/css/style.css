@@ -43,11 +43,18 @@ body{
   color: grey;
 }
 
-#index-header,#project-header,#exp-header{
+.header-dark{
     text-align: center;
     border: 2px solid #646D7E;
     background-color: black;
     color: white;
+}
+
+.header-light{
+    text-align: center;
+    border: 2px solid #646D7E;
+    background-color: #AFDCEC;
+    color: black;
 }
 
 /*-----------------------responsive design-----------------------*/
@@ -246,3 +253,4 @@ body{
     border: 2px solid grey;
     background-color: #BCC6CC;
 }
+
