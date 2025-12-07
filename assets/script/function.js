@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded',() =>{
                 }
             }
             themeBtn.setAttribute("class","switch-theme-dark")
-            themeBtn.textContent = "light mode"
+            themeBtn.textContent = "Light mode"
             savedTheme = "dark"
         }
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded',() =>{
                 }
             }
             themeBtn.setAttribute("class","switch-theme-light")
-            themeBtn.textContent = "dark mode"
+            themeBtn.textContent = "Dark mode"
             savedTheme = "light"
         }
         
@@ -89,3 +89,4 @@ document.addEventListener('DOMContentLoaded',() =>{
     })
     
 })
+
