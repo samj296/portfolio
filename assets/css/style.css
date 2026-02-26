@@ -186,12 +186,29 @@ body{
 
 
 .sec-intro{
-    margin: 20px;
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     grid-gap: 20px;
+    
 }
 
+.intro{
+    border: grey solid;
+}
+
+.github-section{
+    border: grey solid;
+}
+
+.git-profile{
+    font-size: 0.9rem;
+}
+
+
+.skill-section{
+    border: grey solid;
+    margin: 5px 0px;
+}
 
  /* this is to make the text at the center */
 .project-teaser h2{
@@ -254,3 +271,33 @@ body{
     background-color: #BCC6CC;
 }
 
+/* styling for the print page */
+
+.pdf-body{
+    background-color: white;
+    color: black;
+}
+
+.pdf-section{
+    border: black solid 2px;
+    margin: 5px;
+    padding-left: 5px;
+}
+
+.pdf-section h3{
+    text-decoration: underline;
+}
+
+@media print{
+    .btn-hide{
+        display: none;
+    }
+}
+
+
+
+/* 
+.btn-unhide{
+    display: inline-block
+} 
+    */
